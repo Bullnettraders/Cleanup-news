@@ -30,7 +30,7 @@ async def on_ready():
 async def cleanup_old_messages():
     await bot.wait_until_ready()
     now = datetime.datetime.now(datetime.UTC)
-    cutoff = now - datetime.timedelta(days=2)  # NUR älter als 2 Tage
+    cutoff = now - datetime.timedelta(days=1)  # NUR älter als 1 Tage
 
     for channel_id in CHANNEL_IDS:
         channel = bot.get_channel(channel_id)
